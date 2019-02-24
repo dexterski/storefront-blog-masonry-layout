@@ -1,0 +1,115 @@
+/** blog masonry layout */
+
+/* Masonry Custom CSS  */
+
+/* Source: https://premium.wpmudev.org/blog/add-masonry-grid-layouts-to-your-wordpress-site-with-just-css/ */
+
+/* StoreFront customizations */
+body.blog .col-full {
+	padding: 0 1em;
+}
+
+/* Masonry container */
+body.blog div#content {
+-moz-column-count: 3;
+-webkit-column-count: 3;
+column-count: 3;
+-moz-column-gap: .5em;
+-webkit-column-gap: .5em;
+column-gap: .5em;
+}
+
+/* Masonry bricks or child elements */
+
+body.blog article {
+background-color: #f2f2f2;
+display: inline-block;
+margin: 0 0 3em;
+padding: 1em;
+width: 100%;
+}
+
+body.blog .paging-navigation {
+background-color: #ffffff;
+-webkit-column-span: all;
+column-span: all;
+}
+
+/* Some ad hoc CSS useful for many themes */
+body.blog .site-content {
+margin: 1em;
+}
+
+body.blog h1, body.blog h2, body.blog h3, body.blog h4, body.blog h5, body.blog h6, body.blog a {
+-ms-word-wrap: break-word;
+word-wrap: break-word;
+}
+
+/* Responsive customizations */
+@media only screen and (max-width : 1024px) {
+	body.blog div#content { /* Masonry container */
+	-moz-column-count: 3;
+	-webkit-column-count: 3;
+	column-count: 3;
+	}
+	
+	body.blog .col-full {
+		margin-left:0;
+		margin-right:0;
+	}
+	
+	body.blog .col-full .alpha, h1 {
+		font-size: 1.8em;
+	}
+}
+
+@media only screen and (max-device-width : 1024px) and (orientation : portrait) {
+	body.blog div#content { /* Masonry container */
+	-moz-column-count: 2;
+	-webkit-column-count: 2;
+	column-count: 2;
+	}
+	
+	body.blog .col-full {
+		margin-left:0;
+		margin-right:0;
+	}
+	
+	body.blog .col-full .alpha, h1 {
+		font-size: 1.8em;
+	}
+}
+
+@media only screen and (max-width : 768px) {
+	body.blog div#content { /* Masonry container */
+	-moz-column-count: 2;
+	-webkit-column-count: 2;
+	column-count: 2;
+	}
+	
+	body.blog .col-full {
+		margin-left:0;
+		margin-right:0;
+	}
+	
+	body.blog .col-full .alpha, h1 {
+		font-size: 1.8em;
+	}
+}
+
+@media only screen and (max-width : 480px) {
+	body.blog div#content { /* Masonry container */
+	-moz-column-count: 1;
+	-webkit-column-count: 1;
+	column-count: 1;
+	}
+	
+	body.blog .col-full {
+		margin-left:0;
+		margin-right:0;
+	}
+	
+	body.blog .col-full .alpha, h1 {
+		font-size: 1.8em;
+	}
+}
